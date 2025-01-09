@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 25px;
+    width: 100%;
+    min-height:100vh;
+}
+
+.container {
+    width: 100%;
+    border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    /* u can use column-reverse, column, row-reverse too */
+    justify-content: space-around;
+    /* flex-end; */
+    /* this works on the left(flex-start) and center too */
+    /* //space-between, space-around and  space-evenly, you use this too on the justify-content: ; */
+    align-content: center;
+    /* put like this it can't work until you put the flex-wrap; */
+    /* if you put the flex-start it goes up and when you do the flex-end, it goes bottom */
+    flex-wrap: wrap;
+    /* nowrap */
+    /* wrap-reverse */
+    /* when you do flex-start it goes up the content, flex-end the content goes up, center the center the content goes in the middle
+    then space-between the content puts the spaces between the content then the space-around it puts the spaces around like aside the border. */
+    place-content: center center;
+    /* you can use this alone without the justify-content: ; */
+    align-content:center;
+    align-items: center;
+    /* here you use the center,flex-start(they go tot the top),flex-end(they go to the bottom),center,stretch(equal) and baseline(here the items go up and down) */
+}
+
+.box-1{
+align-self: flex-end;
+/* it is used to move one flex item along the x axis or the y axis */
+flex-grow: 1;
+/* it grow the box bigger on each */
+}
+.box-2{
+ align-self: flex-start;
+ flex-grow: 1;
+ flex-shrink: 3;
+  /* this shrinks bigger than the others */
+ flex-basis: 200px;
+ /* you can combine the both grow, shrink and basis in one flex, the first position is grow then the second is shrink then the last is basis */
+ flex: 2 3 200px;
+ flex-flow: row wrap;
+ /* if you use this then you can delete the flex-direction and flex-wrap */
+ /* this has the flex-direction and flex-wrap */
+}
+
+/* when you want to move its self you can use the box or the other method of putting the nth child */
+/* then when you want to move the whole content you use the align-content and align-items */
+
+/* order is used to re-arrange the items in the flex content */
